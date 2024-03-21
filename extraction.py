@@ -92,9 +92,8 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
 
 
 def main():
-
-    resultat_pretraitement_positif = pretraitement("./positif_comments/page/Communauté Steam Portal 2.html") 
-    chargement_commentaire_positif(resultat_pretraitement_positif, "./positif_comments")
+    resultat_pretraitement_positif = pretraitement("./positive_comments/page/Communauté Steam Portal 2.html") 
+    chargement_commentaire_positif(resultat_pretraitement_positif, "./positive_comments")
     resultat_pretraitement_negatif = pretraitement("./negative_comments/page/Communauté Steam Portal 2.html")
     chargement_commentaire_negatif(resultat_pretraitement_negatif, "./negative_comments/") 
 
