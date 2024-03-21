@@ -17,7 +17,7 @@ Dans notre cas, il va falloir retirer les images et les pseudo des utilisateurs.
 
 ## Etape 2 : nettoyage du corpus
 ### Nos problèmes 
-* Certains commentaires en anglais apparaissent aussi.
+* Certains commentaires en anglais apparaissent aussi -> langdetect
 * Il faut supprimer les émojis.
 
 ## Pourquoi nettoyer ?
