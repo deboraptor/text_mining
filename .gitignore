@@ -1,2 +1,2 @@
-./negative_comments
-./positif_comments
+positif_comments/commentaire_positif_*.txt
+negative_comments/commentaire_negatif_*.txt
