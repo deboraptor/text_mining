@@ -1,7 +1,12 @@
-"""récupération des commentaires steams sur Portal 2"""
+"""
+Récupération des commentaires steams sur Portal 2
+auteurs : Baptiste et Débora
+"""
 
 from pathlib import Path
 from bs4 import BeautifulSoup 
+from langdetect import detect
+
 
     ##questions de prétraitement :
     ## - les qcm
@@ -9,6 +14,23 @@ from bs4 import BeautifulSoup
     ## les images avec dessinées avec des ___
     ## ne prendre en compte que les commentaires avec un certains nombre de mots : FAIT
     ## certains coms restent en anglais
+
+def traitement_des_langues(chemin_resultat : str | Path) -> bool:
+
+    print(len(chemin_resultat))
+    chemin_resultat = Path(chemin_resultat)
+
+    for file in chemin_resultat.glob("*.txt"):
+        with open(file, "r") as f:
+            content = f.read()
+            langue = detect(content)
+            if langue == 'fr':
+                print(f"{file}\t{detect(content)}")
+                return True
+            else:
+                print(f"On a skip cette langue : {langue}")
+                return False
+
 
 def pretraitement(page_html: str | Path) -> str:
 
@@ -21,6 +43,7 @@ def pretraitement(page_html: str | Path) -> str:
     for tag in soup.find_all("div", class_="date_posted"):
         tag.decompose()
     return soup
+
 
 def chargement_commentaire_positif(soup : BeautifulSoup, chemin_resultat : str | Path) -> None:
 
@@ -39,6 +62,10 @@ def chargement_commentaire_positif(soup : BeautifulSoup, chemin_resultat : str |
             element = element.lower() # on met tout en minuscule pour éviter les erreurs avec langdetect
             with open(f"{chemin_resultat}/commentaire_positif_{i}.txt", 'w', encoding='UTF8') as resultat:
                 resultat.write(element.strip())
+                if not traitement_des_langues(resultat.name):
+                    # on supprime le fichier si c'est pas en français
+                    resultat.close()
+                    Path(resultat.name).unlink()
     except Exception as e:
         print(f"Il y'a eu une erreur : {e}")
 
@@ -63,12 +90,14 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
     except Exception as e:
         print(f"Il y'a eu une erreur : {e}")
 
+
 def main():
 
     resultat_pretraitement_positif = pretraitement("./positif_comments/page/Communauté Steam Portal 2.html") 
     chargement_commentaire_positif(resultat_pretraitement_positif, "./positif_comments")
     resultat_pretraitement_negatif = pretraitement("./negative_comments/page/Communauté Steam Portal 2.html")
     chargement_commentaire_negatif(resultat_pretraitement_negatif, "./negative_comments/") 
+
     print("tout s'est bien passé bonhomme ! ")
 
 

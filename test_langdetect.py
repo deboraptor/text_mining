@@ -10,7 +10,11 @@ print(len(path))
 for file in path:
     with open(file, "r") as f:
         content = f.read()
-        print(f"{file}\t{detect(content)}")
+        langue = detect(content)
+        if langue == 'fr':
+            print(f"{file}\t{detect(content)}")
+        else:
+            print(f"On a skip cette langue : {langue}")
 
 # Voici notre output
 # Je vérifie à la main si c'est correct
