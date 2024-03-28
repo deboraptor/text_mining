@@ -6,7 +6,10 @@ auteurs : Baptiste et Débora
 from pathlib import Path
 from bs4 import BeautifulSoup 
 from langdetect import detect
+from typing import List
+import pretty_errors
 
+import glob
 
     ##questions de prétraitement :
     ## - les qcm
@@ -15,12 +18,14 @@ from langdetect import detect
     ## ne prendre en compte que les commentaires avec un certains nombre de mots : FAIT
     ## certains coms restent en anglais
 
+def recolter_chemins() -> List[Path]:
+    chemins = Path(glob.glob("./*_comments/*.txt"))
+    chemins_path = [Path(chemin) for chemin in chemins]
+    return chemins_path
+
 def traitement_des_langues(chemin_resultat : str | Path) -> bool:
-
-    print(len(chemin_resultat))
-    chemin_resultat = Path(chemin_resultat)
-
-    for file in chemin_resultat.glob("*.txt"):
+    """ Autoriser que les commentaires en français. """
+    for file in chemin_resultat:
         with open(file, "r") as f:
             content = f.read()
             langue = detect(content)
@@ -33,6 +38,7 @@ def traitement_des_langues(chemin_resultat : str | Path) -> bool:
 
 
 def pretraitement(page_html: str | Path) -> str:
+    """ Prétritement du fichier avec BeautifulSoup. """
 
     ## prétraitement : 
     ## il faut supprimer le tag date_posted car le résultat est moche et on ne le veut pas, il est contenu dans la balise qui contient le commentaire
@@ -46,8 +52,8 @@ def pretraitement(page_html: str | Path) -> str:
 
 
 def chargement_commentaire_positif(soup : BeautifulSoup, chemin_resultat : str | Path) -> None:
-
-    # surement pas la meilleure technique j'avais des problemes pour manipuler le tag cela m'indiquait que c'était un tag et non un str du coup j'ai fait une liste
+    """ Si le commentaire est positif (ce qu'on sait avec la note) on l'enregistre sous forme d'un fichier .txt 
+    dans un dossier appelé 'positive_comments'. """
 
     tag = soup.find_all(attrs={'class':'apphub_CardTextContent'})
     liste = []
@@ -67,13 +73,11 @@ def chargement_commentaire_positif(soup : BeautifulSoup, chemin_resultat : str |
                     resultat.close()
                     Path(resultat.name).unlink()
     except Exception as e:
-        print(f"Il y'a eu une erreur : {e}")
+        print(f"Il y a eu une erreur : {e}")
 
 
 def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str | Path):
-    """même principe que la fonction commentaire positif"""
-
-    # surement pas la meilleure technique j'avais des problemes pour manipuler le tag cela m'indiquait que c'était un tag et non un str du coup j'ai fait une liste
+    """ Même principe que la fonction commentaire positif, mais pour les commentaires négatifs. """
 
     tag = soup.find_all(attrs={'class':'apphub_CardTextContent'})
     liste = []
@@ -88,7 +92,7 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
             with open(f"{chemin_resultat}/commentaire_negatif_{i}.txt", 'w', encoding='UTF8') as resultat:
                 resultat.write(element.strip())
     except Exception as e:
-        print(f"Il y'a eu une erreur : {e}")
+        print(f"Il y a eu une erreur : {e}")
 
 
 def main():
@@ -96,7 +100,9 @@ def main():
     chargement_commentaire_positif(resultat_pretraitement_positif, "./positive_comments")
     resultat_pretraitement_negatif = pretraitement("./negative_comments/page/Communauté Steam Portal 2.html")
     chargement_commentaire_negatif(resultat_pretraitement_negatif, "./negative_comments/") 
-
+    chemins = recolter_chemins()
+    traitement_des_langues(chemins)
+    
     print("tout s'est bien passé bonhomme ! ")
 
 
