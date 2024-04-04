@@ -97,8 +97,6 @@ def main():
     resultat_pretraitement_negatif = pretraitement("./negative_comments/page/Communauté Steam Portal 2.html")
     chargement_commentaire_negatif(resultat_pretraitement_negatif, "./negative_comments/") 
 
-    print("tout s'est bien passé bonhomme ! ")
-
 
 if __name__ == "__main__":
     main()
