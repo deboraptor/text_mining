@@ -1,1 +1,3 @@
 langdetect
+bs4
+pretty_errors
