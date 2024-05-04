@@ -1,8 +1,1 @@
-no altf4impossible to exit this game unless you know
- that the exit button is hidden scrolling down the system menu, there is
- no indication that it can scroll.the integrated mod download is 
-somewhat cool but there are mods that require dependancies without 
-telling which and mods that make the game crash at load without telling 
-which (foxy is making may game crash, diagnosed after hours of 
-tinkering, and mods loading order is crucial but the ui is not up to the
- task).the papyrus mod loging/tracing is not very hepfull diagnosing mod related game crashes.and some mods require some skyrim script engine which is to be hand installed.as i can't post my feedback as neutral i make it negative because right now i'm a bit angry.
+jai pas la ferme de la toundra et de nombre endroit du jeu alors que jai le pack anniversaire
