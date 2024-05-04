@@ -42,6 +42,7 @@ def SVM(X, y):
     # TF-IDF
     nltk.download('stopwords')
     stop_words = stopwords.words('french')
+    stop_words.remove("pas")
     vectorizer = TfidfVectorizer(stop_words=stop_words)
     X_train_tfidf = vectorizer.fit_transform(X_train)
     X_test_tfidf = vectorizer.transform(X_test)
