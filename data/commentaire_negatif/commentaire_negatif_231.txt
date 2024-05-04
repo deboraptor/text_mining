@@ -1,1 +1,1 @@
-jai un problme le jeu plante lorsque que jarrive  la cration du personnage
+jai un problème le jeu plante lorsque que jarrive à la création du personnage
