@@ -2,7 +2,7 @@
 ---------------
 
 - GILLET Baptiste
-- VAN Débora 
+- VAN-DEN-ZANDE Débora 
 
 
 
@@ -18,7 +18,8 @@ Pour ce qui est du choix du jeu nous avons décidé de prendre un monument du je
 
 - Sckipit Learn
 - BeautifulSoup : pour scrapper nos pages steam
-- Languedetect pour identifier la langue
+- Langdetect : pour identifier et cibler la langue française
+- re : pour les expressions régulières (utile lors du prétraitement)
 -----
 
 # Organisation du projet :
@@ -31,8 +32,24 @@ Les commentaires sont rangés dans des fichiers commentaire_negatif, commentaire
 
 ## Prétraitement des données
 
-Nous le savons les gamers ont tendance à être assez tatillon lorsqu'il s'agit de laisser un commentaire sur un jeu qu'ils aiment où non. Nous avons été confronté à plusieurs difficultés qu'il a fallu gérer lors du prétraitement de nos données. Il était impératif de bien traiter ces données car lors de l'utilisation de languedetect quelque fois la librairie ne comprenait pas certains commentaire comme par exemple :
+Nous le savons les gamers ont tendance à être assez tatillon lorsqu'il s'agit de laisser un commentaire sur un jeu qu'ils aiment où non. Nous avons été confronté à plusieurs difficultés qu'il a fallu gérer lors du prétraitement de nos données pour pouvoir homogéneiser nos commentaires. 
+- **Les caractères d'espacement** : effectviement lorsque nous récuppérions les commentaires ceux si comportaient beaucoup de caractères d'echappement certainement dû au formatage de Steam.
+- **Commentaire en anglais** : Certains commentaires étaient rédigés en anglais, bien que lors de notre extraction nous avons mis le filtre **commentaire en français** sur Steam. Cela signifie probablement que l'utilisateur à un compte français mais rédige son commentaire en anglais. Il a fallu gérer ces commentaires et pour cela nous avons utilisé la librairie **langdetect** et son module detect.
+- **Commentaire graphique** : Certains commentaires graphique ne pouvait pas être traiter avec langdetect car il ne comprenait pas. Nous avons donc importer la librairie **re** afin de spécifier que nous ne voulions pas de caractères 
 
 ![commentaire_graphique](../images/commentaire_graphique.png)
 
-qui est l'équivalent de ![commentaire_graphique](../images/resultat_commentaire_graphique.png)
+qui est l'équivalent de :
+![commentaire_graphique](../images/resultat_commentaire_graphique.png)
+
+
+
+## Résultat : 
+
+On se re trouve avec 244 commentaires négatifs et 244 commentaires positifs (nous avons fait en sorte d'obtenir le même nombre d'avis) et grâce à la dataclass **Commentaire**, nous écrivons le contenu des commentaires dans un csv.
+
+![commentaire_graphique](../images/resultats_csv.png)
+
+
+
+
