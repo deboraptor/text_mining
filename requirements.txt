@@ -1,3 +1,8 @@
 langdetect
+<<<<<<< HEAD
 bs4
 pretty_errors
+=======
+scikit learn
+BeautifulSoup
+>>>>>>> bg
