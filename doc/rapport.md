@@ -44,11 +44,27 @@ qui est l'équivalent de :
 
 
 
-## Résultat : 
 
-On se re trouve avec 244 commentaires négatifs et 244 commentaires positifs (nous avons fait en sorte d'obtenir le même nombre d'avis) et grâce à la dataclass **Commentaire**, nous écrivons le contenu des commentaires dans un csv.
+## Erreurs qui ont pris du temps 
+Nous ne comprenions pas pourquoi certains caractères étaient mal encodés, pourtant le contenu de nos fichiers était écrit en UTF-8 pareil pour notre csv. 
+Il s'est avéré que c'était une erreur dûe à notre regex qui éliminait tous les caractères diacrités.
+Il a fallu la modifier :
+```py
+cleaned_text = re.sub(r'[^a-zA-Z\s-]', '', tag.get_text()) 
 
-![commentaire_graphique](../images/resultats_csv.png)
+par : 
+
+cleaned_text = re.sub(r'[^\w\s-]', '', tag.get_text()) 
+```
+
+![commentaire_graphique](../images/resultats_bizarres.png)
+
+
+## Résultats de notre CSV final : 
+
+On se retrouve avec 245 commentaires négatifs et 245 commentaires positifs (nous avons fait en sorte d'obtenir le même nombre d'avis) et grâce à la dataclass **Commentaire**, nous écrivons le contenu des commentaires dans un csv.
+
+![commentaire_graphique](../images/resultat_csv.png)
 
 
 
