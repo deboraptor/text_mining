@@ -36,7 +36,7 @@ def pretraitement(page_html: str | Path) -> str:
 
     ## utilisation d'une expression régulière afin de retirer les commentaire qui sont des dessins graphiques
     for tag in soup.find_all(attrs={'class':'apphub_CardTextContent'}):
-        cleaned_text = re.sub(r'[^a-zA-Z\s-]', '', tag.get_text()) 
+        cleaned_text = re.sub(r'[^\w\s-]', '', tag.get_text()) 
         tag.string = cleaned_text.lower()  
     
     return soup
@@ -95,7 +95,7 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
         
             if len(mots) >= 10: 
                 liste.append(element.get_text())
-                commentaire_negatif = Commentaire(id_fichier=i, sentiment="negatif", commentaire=texte, )
+                commentaire_negatif = Commentaire(id_fichier=i, sentiment="negatif", commentaire=texte)
                 liste_objet_negatif.append(commentaire_negatif)
                 i+= 1
                 if i == 244: ## on récupère 245 commentaires négatifs afin d'avoir le même nombre de commentaires négatifs et positifs
