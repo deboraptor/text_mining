@@ -1,0 +1,1 @@
+j'ai un problème le jeu plante lorsque que j'arrive à la création du personnage

@@ -1,0 +1,27 @@
+skyrim : un jeu culte, remasterisé.alors non, ce
+ n'est pas qu'une simple màj graphique. on a bien là un jeu en 64bits 
+refait en entier et pour ceux qui ne comprennent pas ce que ça veut 
+dire, éh bien entre autre le cap des 4go de ram est levé, le tout sous 
+un moteur graphique en dx11.de la ram en plus et un enb c'est ce
+ que les mauvaises langues se contenteront de dire mais la refonte du 
+jeu va nous permettre de gagner en puissance et en capacité de mods et 
+là est le plus grand intérêt.sans parler même de mods en prenant le 
+jeu tel qu'il est vanilla, nous sommes bien là en présence d'un jeu plus
+ beau et plus fourni. plus d'herbes, des ajouts autour des villes et 
+certaines quêtes en plus.le jeu est totalement gratuit pour ceux
+ qui, comme la majorité des gens je pense, disposent du jeu et des dlc 
+(où encore la legendary edition)certes il va falloir attendre 
+que les mods se fassent porter vers ce nouveau jeu et là est notre 
+anticipation, voire notre crainte. parce que oui, faire un mod demande 
+du temps donc les auteurs en question ne seront pas forcément enclins à 
+refaire leur mod en entier pour certains.cependant l'affluence de 
+mods (et la surcharge que subit le nexus) est un excellent signe que ce 
+jeu, qui est l'un des plus moddé encore, va bénéficier de tous les mods 
+que nous connaissons avec des possibilités encore plus énormes que 
+l'original.d'ailleurs n'utilisez jamais le workshop ni la 
+fonction ingame de bethesda pour les mods mais uniquement le nexus (avec
+ le nexus mod manager). l'anglais c'est pas compliqué et ce dernier vous
+ évitera des crash grâce à sa gestion des mods.en bref,si vous avez la version gratuie : arrêtez de vous plaindre.si vous n'avez pas la version gratuite mais déjà fait le jeu, attendez une promo.si vous n'y avez jamais joué : foncez ! c'est le moment d'ajouter ce chef d'oeuvre du jeu vidéo dans votre collection.tl;dr :
+ stop spammer que c'est juste un boost graphique si vous ne savez pas ce
+ que passer d'un .exe 32bits à un .exe 64bits et un moteur dx11 veut 
+dire. vous l'avez sans doute eu gratos en plus.sur ce, j'y retourne passer ~1000 heures. vous aussi, amusez vous bien !en prime le live de la soirée de lancement : https://www.twitch.tv/my_virtual_world/v/97485527

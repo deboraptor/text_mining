@@ -1,0 +1,92 @@
+déjà joué sur l'édition normale et voulu passer à la  "special edition"..."impossible d'identifier le logiciel vidéo. les paramètres d'affichage sont réglés sur la qualité basse"tout
+ ça avec une amd r9 m395x - 4096 mb, le pilote étant à jour, et un écran
+ 5k. si je passe à une autre définition que 1900 x 1200, rien ne 
+s'adapte à mon écran 24 ou 27" (faudrait que je vérifie...). après 
+quelques tentatives, je ne parviens même plus à passer le jeu en plein 
+écran... ca ne présage rien de bon...evidemment, je suis sous win10 en partition bootcamp, puisque possesseur d'un imac...l'édition normale, elle, fonctionne correctement et ma carte est reconnue d'emblée.l'essai
+ est donc pour le moins décevant et je pense qu'il serait plus sage de 
+repasser à la version d'origine... désinstall - réinstall et m...! - 
+heureusement que j'ai enfin le vdsl depuis peu...recopié de l'évaluation de l'édition originale - positive, mais limite, elle - :j'avais
+ déjà arrêté cette édition originelle du jeu après 41 heures, n'en 
+appréciant pas certaines mécaniques et ayant un peu l'impression de 
+tourner en ronds - rien à voir avec un morrowind , dont je n'ai jamais 
+retrouvé l'ambiance et la liberté... bien sûr, morrowind avait aussi ses
+ zones "casse-gueule", mais si ceci est aussi un open-world, il bien 
+plus et autrement "canalisé" par la difficultéavec morrowind, où 
+qu'on aille, on pouvait évoluer ou trouver matière à... et même s'il 
+arrivait qu'on reste sur le carreau, on reprenait une sauvegarde 
+antérieure et essayait un autre chemin, une variante proche, on pouvait 
+contourner, accéder autrement... ici, je n'ai pas du tout le même 
+sentiment.c'est ce qui fait la différence et c'est pourquoi je 
+considère morrowind comme le maître-jeu en matière de monde ouvert : on 
+escaladait, on nageait, on plongeait, on sautait, on courait, tout en 
+récoltant, pour aller là où on l'aurait souhaité et on améliorait en 
+même temps ses capacités (athlétisme, chute ralentie, etc.), voire son 
+équipement; on découvrait parfois des lieux cachés, 
+presqu'innaccessibles,  puis on craftait, on lisait et on les améliorait
+ un peu plus encore... - pas comparable ! ici, si le principe reste, 
+l'accès au craft utile est d'une lenteur abominable : on ne devrait se 
+consacrer qu'à une ou deux compétences en début de jeu, mais l'arbre ne 
+le permet pas, puisqu'il faut avoir un certain niveau dans la compétence
+ pour accéder à la suivante. ainsi au niv 16, je galère toujours pour le
+ crochetage et, malgré les sauvegardes antérieures, c'est par dix ou 
+vingt que je fous mes crochets à la poubelle pour parfois obtenir un 
+petit point d'évolution... heureusement que, toujours, il y a de temps à
+ autre des livres...le jeu en lui-même n'est pas trop mal, mais il ne m'accroche pas, il irait même parfois jusqu'à m'ennuyer... de
+ plus, depuis morrowind - qui, avec son moteur, atteignait déjà un 
+niveau graphique extraordinaire pour l'époque ainsi qu'une originalité 
+graphique - rien ne s'est amélioré : les décors, armures et personnages 
+tombent dans la banalité, les quêtes sont de moins en moins explicites, 
+les compétences pas évidentes et de plus en plus longues à acquérir, 
+tandis que le perso' bute systémétiquement dans son compagnon dans les 
+lieux étroits, ou alors, celui-ci disparaît pour ne réapparaître 
+qu'aléatoirement, ne suit pas dans les grimpettes, voire ♥♥♥♥♥♥♥ dans la
+ semoule pendant que je me fais trucider...et toujours le même 
+problème - déjà présent dans morrowind - : la surcharge qui guette à la 
+moindre découverte. ce qui fait que le jeu ne peut démarrer valablement 
+que lorsque on a trouvé une base dotée d'une bonne position, de coffres 
+surtout et du maximum d'ateliers utiles proches ( forge, alchimie, 
+etc.), tandis que la carte n'est pas annotable...d'autres décors, 
+une autre carte, mais où est le progrès ? le jeu est calqué et n'affiche
+ guère d'aménagements, sinon qu'il s'est compliqué au niveau des 
+commandes et de l'arbre des compétences, tandis qu'il a en a éliminé 
+d'autres (athlétisme,etc) qui faisaient la différence et rendait le jeu 
+plus riche.les concepteurs auraient pu, par exemple, offrir la 
+possibilité soit de crafter, soit de démonter et remonter les composants
+ d'atelier... la pèche, elle, n'existe que dans un mod, alors que j'ai 
+rencontré plusieurs cannes dans le jeu... les menus des coffres sont 
+toujours bordéliques : aucun classement (armes, tenues, divers, etc), 
+sinon un alphabétique très aléatoire... si je veux mieux équiper mon
+ compagnon, la visibilité est limitée à certains articles : comment 
+savoir s'il a une armure d'acier normale ou supérieure ? a tout hasard, 
+je lui en fais une... ses compétences ? quels livres, quelles potions, 
+quels parchemins lui fournir...?et de l'usage des articles... ? ca 
+sert encore à quoi un outil d'embaument...? je crois me souvenir que 
+dans morrowind, il existait une encyclopédie... - certainement beaucoup 
+plus étoffée que ce qu'ils appellent l'"aide" actuelle -.seul 
+progrès : hearthfire, avec possiblilité de construire sa maison, mais 
+foireuse que ce n'en est pas possible - des trophées qui dégringolent, 
+qu'on ne peut replacer ou détruire et encombrent, des armoires et 
+vitrines qu'on ne peut garnir qu'exceptionnellement et qu'à grands 
+renforts de manipulations fastidieuses et un agencement obligé...vrai
+ qu'à l'époque, je l'aurais peut-être trouvé génial, mais il lasse, car 
+il donne l'impression de répétitions encore et encore, avec plus de 
+lenteur encore dans l'évolution du perso' (surtout avant le niv 30), 
+qui, en outre, dans cette version réduite, grimpe, nage,saute comme un 
+fer à repasser et plonge comme un bouchon de liège.non ! décidément, les opus 4 et 5 ne sont que de pauvres copies édulcorées du 3, innovateur et génial à son lancement...ils ont gardé partiellement la formule de base, mais sans l'améliorer aucunement.il
+ est quand même à regretter que depuis morrowind, la série des elder 
+scroll doive l'essentiel de son succès, non à ses concepteurs, mais à 
+ses moddeurs, tandis qu'elle ne semble représenter pour les premiers 
+qu'une source inépuisable de financement...de temps à autre, 
+avec l'anniversary, je tente de m'y remettre, mais que de temps passé en
+ rangements, de gestion des inventaires, de revente pour s'alléger, 
+c'est lourd, abominablement lourd, surtout après deux ou trois mois 
+d'interruption: où dois-je encore ranger ça ? et quand on passe à 
+l'artisanat, cuisine, potions, gemmes, forge ...on s'y recolle. sans 
+compter une vision très aléatoire des contenants dans heartfire...elle
+ reste néanmoins unique par la vastitude de son monde et son ambiance et
+ si elle ne passionne plus, elle occupe agréablement du moins... c'est 
+la seule raison  pour laquelle, je changerais cette évaluation négative 
+en positive, si je n'étais réellement lassé de la lourdeur de ce jeu et 
+ne devais y consacrer autant de temps en rangements / gestion de 
+l'inventaire...

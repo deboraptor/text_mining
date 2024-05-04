@@ -1,0 +1,5 @@
+encore une fois les developpeurs nous montrent a quel 
+point ils se torchent avec l'optimisation, mais là ou ils frappent fort 
+c'est que le jeu est de 2011 !jouer a 40fps pour deux trois rayons 
+de soleil et un peu d'occlusion ambiante non merci (à noter qu'aucune 
+amélioration des modèles 3d est présente)préférez donc la version de base qui elle permet d'avoir 60 fps constant et possède le workshop

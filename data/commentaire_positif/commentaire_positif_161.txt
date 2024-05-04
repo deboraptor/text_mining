@@ -1,0 +1,8 @@
+it's skyrim, do i really need to explain why it's cool ?i
+ guess if i had to sum up quickly, it's a great game that can be made 
+way, way, way better with mods. even if you intend to play the game 
+without mods, which is perfectly fine, you should get the unofficial 
+skyrim special edition patch (ussep).oh by the way, if you play 
+on a high refresh rate monitor, you'll need to get "sse engine fixes 
+(skse64 plugin)" and also skse64 so that vertical look sensitivity isn't
+ broken.

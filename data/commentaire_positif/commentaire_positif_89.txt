@@ -1,0 +1,5 @@
+positifle jeu est en 64 bits et donc il n'est 
+plus aussi limité que l'ancien skyrim niveau mémoire, donc plus de 
+texture hd et moins de crash! avec skse64, 99% des mods de la legendary 
+edition sont disponible pour la special edition. le jeu est extrèmement 
+stable, je joue avec environ 700 mods et je n'ai aucun crash.négatifle nouvel anti-aliasing (taa) rend le jeu tout flou, c'est dégeulasse. pourquoi ont-ils enlevé le msaa? -_-il y a des mises à jour chiantes régulièrement qui demandent une mise à jour de skse.requiem n'est pas disponible encore.conclusionc'est bien.

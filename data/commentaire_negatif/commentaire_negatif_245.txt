@@ -1,0 +1,6 @@
+cette version remasteriser est bourré de bugs jamais corrigé qui n'était même pas présent dans le jeu de base. entre
+ l'inventaire qui se ferme aléatoirement, les dialogues impossible à 
+lancer ou poursuivre ( et donc les quetes inaccessible faute de dialogue
+ ...) les zones additionnels issus des extensions ( comme le chateau
+ de la garde de l'aube) considéré comme hors limite de la carte et donc 
+inaccessible ... la liste est longue et ça m'as coupé l'envie de me remettre a ce jeu qui m'as pourtant occupé tant d'heures par le passé.
