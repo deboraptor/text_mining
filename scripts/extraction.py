@@ -12,7 +12,6 @@ from datascturtures import Commentaire
 from typing import List
 
 
-
 def commentaire_français(texte : str | Path) -> bool:
     """Vérifie si un texte est en français."""
     if len(texte) < 9:  ## on prédéfinit que notre texte doit avoir plus de 9 caractères
@@ -65,12 +64,15 @@ def chargement_commentaire_positif(soup : BeautifulSoup, chemin_resultat : str |
                 commentaire_positif = Commentaire(id_fichier=i, sentiment="positif", commentaire=texte) ## ajout à la liste de notre dataclass commentaire
                 liste_objet_positif.append(commentaire_positif)
                 i+=1
+                if i == 244:
+                    break
+
     print(f'{len(liste)}')
     
     try:
         for i, element in enumerate(liste): 
             element = element.lower()
-            with open(f"{chemin_resultat}/commentaire_positif_{i}.txt", 'w', encoding='UTF8') as resultat:
+            with open(f"{chemin_resultat}/commentaire_positif_{i}.txt", 'w', encoding='UTF-8') as resultat:
                 resultat.write(element.strip())
 
     except Exception as e:
@@ -96,14 +98,14 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
                 commentaire_negatif = Commentaire(id_fichier=i, sentiment="negatif", commentaire=texte, )
                 liste_objet_negatif.append(commentaire_negatif)
                 i+= 1
-                if i >= 244: ## on récupère 243 commentaires négatifs afin d'avoir le même nombre de commentaires négatifs et positifs
+                if i == 244: ## on récupère 245 commentaires négatifs afin d'avoir le même nombre de commentaires négatifs et positifs
                     break
     print(f'{len(liste)}')
     
     try:
         for i, element in enumerate(liste):
-            element = element.lower() # on met tout en minuscule pour éviter les erreurs avec langdetect
-            with open(f"{chemin_resultat}/commentaire_negatif_{i}.txt", 'w', encoding='UTF8') as resultat:
+            element = element.lower() ## on met tout en minuscule pour éviter les erreurs avec langdetect
+            with open(f"{chemin_resultat}/commentaire_negatif_{i}.txt", 'w', encoding='UTF-8') as resultat:
                 resultat.write(element.strip())
     except Exception as e:
         print(f"Il y'a eu une erreur : {e}")
@@ -113,11 +115,12 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
 def ecrire_commentaire_csv(liste_commentaires, nom_fichier):
     """ecriture des commentaires dans notre csv"""
     
-    with open(nom_fichier, mode='w', newline='', encoding='utf-8') as file:
+    with open(nom_fichier, mode='w', newline='', encoding='UTF-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['id_fichier', 'sentiment', 'commentaire'])  # Écrire l'en-tête des colonnes
+        writer.writerow(['id_fichier', 'sentiment', 'commentaire'])  
         for commentaire in liste_commentaires:
-            writer.writerow([commentaire.id_fichier, commentaire.sentiment, commentaire.commentaire])  # Écrire chaque ligne
+            writer.writerow([commentaire.id_fichier, commentaire.sentiment, commentaire.commentaire])  
+
 
 
 def main():
@@ -129,7 +132,6 @@ def main():
 
     ##fusion des 2 listes de commentaires objets
     liste_commentaires = liste_commentaires_positifs + liste_commentaires_negatifs
-    
 
     ecrire_commentaire_csv(liste_commentaires, '../data/commentaires.csv')
 
