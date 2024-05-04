@@ -1,0 +1,1 @@
+jai un problme le jeu plante lorsque que jarrive  la cration du personnage
