@@ -20,7 +20,6 @@ def construire_csv(chemin_dossier, csv_chemin):
                     writer.writerow([contenu])
 
 
-
 def pretraitement(csv_pos, csv_neg):
     df_pos = pd.read_csv(csv_pos, header=None, encoding='utf-8')
     df_neg = pd.read_csv(csv_neg, header=None, encoding='utf-8')
@@ -35,6 +34,7 @@ def pretraitement(csv_pos, csv_neg):
     y = df['label']
 
     return X, y
+
 
 def SVM(X, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
@@ -58,11 +58,14 @@ def SVM(X, y):
     y_pred = clf.predict(X_test_tfidf)
 
     classification = classification_report(y_test, y_pred)
-
     return classification
 
 
+def main():
+    construire_csv("./data/commentaire_negatif", "./data/commentaire_negatif/commentaires_negatifs.csv")
+    X, y = pretraitement("./data/commentaire_positif/commentaires_positif.csv", "./data/commentaire_negatif/commentaires_negatifs.csv")
+    print(SVM(X, y))
 
-construire_csv("./data/commentaire_negatif", "./data/commentaire_negatif/commentaires_negatifs.csv")
-X, y = pretraitement("./data/commentaire_positif/commentaires_positif.csv", "./data/commentaire_negatif/commentaires_negatifs.csv")
-resultat = print(SVM(X, y))
+
+if __name__ == "__main__":
+    main()
