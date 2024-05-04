@@ -31,4 +31,8 @@ Les commentaires sont rangés dans des fichiers commentaire_negatif, commentaire
 
 ## Prétraitement des données
 
-Nous le savons les gamers ont tendance à être assez tatillon lorsqu'il s'agit de laisser un commentaire sur un jeu qu'ils aiment où non. Nous avons été confronté à plusieurs difficultés qu'il a fallu gérer lors du prétraitement de nos données.
+Nous le savons les gamers ont tendance à être assez tatillon lorsqu'il s'agit de laisser un commentaire sur un jeu qu'ils aiment où non. Nous avons été confronté à plusieurs difficultés qu'il a fallu gérer lors du prétraitement de nos données. Il était impératif de bien traiter ces données car lors de l'utilisation de languedetect quelque fois la librairie ne comprenait pas certains commentaire comme par exemple :
+
+![commentaire_graphique](../images/commentaire_graphique.png)
+
+qui est l'équivalent de ![commentaire_graphique](../images/resultat_commentaire_graphique.png)
