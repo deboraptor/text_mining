@@ -1,19 +1,7 @@
-après plusieurs heures sur cette nouvelle version, je 
-peux clairement affirmé que les graphismes ont été largement améliorés, 
-et ça permet de se passer de certains mods graphiques.de plus le
- nouveau client 64 bits assure des performances optimales au jeu. 
-concrètement le jeu en lui même ne change pas, mais la distance de vue, 
-les nouvelles couleurs, et l'ambiance renforcent encore plus ce 
-sentiment de liberté qui nous était proposé en 2011. et puis, la plupart
- des joueurs pc ont déja skyrim et ses extensions, le jeu est donc 
-gratuit pour eux.pour les nouveaux joueurs, ils découvriront un monument du jeu de rôle et la série elder scrolls.point
- négatif malgré tout : la disparition des mods via steam, puisque 
-bethesda impose "sa boutique" de mod désormais, mais on peut toujours 
-passer par l'excellent nexus mod manager. et si les mods de la version 
-32 bits de skyrim ne sont pas compatibles, beaucoup de développeurs 
-éffectuent la transition et d'ici quelques semaines la plupart des mods 
-seront disponibles sur cette version 64 bits.on attend malgré 
-tout le retour de skse et skyui qui ne sont pour le moment pas adaptés, 
-mais les développeurs assurent bosser dessus. des mods comme frostfall 
-ou ineed sont déjâ disponible, mais sans skse, leur compatibilité est 
-encore un peu limité.
+produit reu gratuitementwow beau travail bethesda je tourne le jeux aux max sans
+ probleime et il est super beau et pour ceux qui dise nanana avec les 
+mod il est plus beau oui peut etre mais faut en installer  mod pi ses 
+quand meme pas facile pour tout le monde et bien souvent mal optimiser 
+pour tout les pc donc si tu veut pas te faire  a installer  mod 
+sans etre sur que sa va marcher ou cracher ton jeux bien prend la 
+special edition pi tes en affaire mon chum

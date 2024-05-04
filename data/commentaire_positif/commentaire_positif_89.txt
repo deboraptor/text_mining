@@ -1,5 +1,8 @@
-positifle jeu est en 64 bits et donc il n'est 
-plus aussi limité que l'ancien skyrim niveau mémoire, donc plus de 
-texture hd et moins de crash! avec skse64, 99% des mods de la legendary 
-edition sont disponible pour la special edition. le jeu est extrèmement 
-stable, je joue avec environ 700 mods et je n'ai aucun crash.négatifle nouvel anti-aliasing (taa) rend le jeu tout flou, c'est dégeulasse. pourquoi ont-ils enlevé le msaa? -_-il y a des mises à jour chiantes régulièrement qui demandent une mise à jour de skse.requiem n'est pas disponible encore.conclusionc'est bien.
+reprenant sur les bases solides de elder scrolls iii et 
+iv cet opus permet beaucoup plus de liberts et de faons de jouer 
+diffrentes sans oublier le fait quil est videmment absolument 
+magnifique on regrettera par contre quon soit un lu au lieu dun 
+simple  qui savre passer dans le coin comme prcdemmentles  cest un elder scrolls donc cest bien possibilits quasi-infinies pour des centaines dheures de jeu mcaniques de jeu rodes et toujours aussi bien fichues carte immense codes des rpg medfan respects les modsles -- trop facile- grosbill-land si vous prenez un mage- tu es llu noje
+ recommande videmment mme si je regrette quelques points fcheux qui
+ peuvent gcher lexprience incroyable quest sens tre un elder 
+scrolls
