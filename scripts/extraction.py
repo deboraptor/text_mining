@@ -132,14 +132,14 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
     return liste_objet_negatif
 
 
-def ecriture_commentaire_csv(liste_commentaires, nom_fichier):
-    """Écriture des commentaires dans notre CSV"""
+# def ecriture_commentaire_csv(liste_commentaires, nom_fichier):
+#     """Écriture des commentaires dans notre CSV"""
 
-    with open(nom_fichier, mode='w', newline='', encoding='UTF-8') as file:
-        writer = csv.writer(file)
-        writer.writerow(['commentaire'])  
-        for commentaire in liste_commentaires:
-            writer.writerow([commentaire.commentaire])
+#     with open(nom_fichier, mode='w', newline='', encoding='UTF-8') as file:
+#         writer = csv.writer(file)
+#         writer.writerow(['commentaire'])  
+#         for commentaire in liste_commentaires:
+#             writer.writerow([commentaire.commentaire])
     
 def ecrire_commentaire_csv_total(liste_commentaires, nom_fichier):
     """Écriture des commentaires dans notre CSV"""
@@ -162,8 +162,8 @@ def main():
     liste_commentaires_negatifs = chargement_commentaire_negatif(resultat_pretraitement_negatif, "../data/commentaire_negatifs") 
 
     ## Ecriture des commentaires dans 2 csv différents
-    ecriture_commentaire_csv(liste_commentaires_negatifs, '../data/commentaire_negatifs/commentaires_negatifs.csv')
-    ecriture_commentaire_csv(liste_commentaires_positifs, '../data/commentaire_positifs/commentaires_positifs.csv')
+    #ecriture_commentaire_csv(liste_commentaires_negatifs, '../data/commentaire_negatifs/commentaires_negatifs.csv')
+    #ecriture_commentaire_csv(liste_commentaires_positifs, '../data/commentaire_positifs/commentaires_positifs.csv')
 
     ##fusion des 2 listes de commentaires objets
     liste_commentaires = liste_commentaires_positifs + liste_commentaires_negatifs
