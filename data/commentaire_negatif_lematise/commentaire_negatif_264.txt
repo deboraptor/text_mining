@@ -1,5 +1,0 @@
-encore une fois les developpeurs nous montrent a quel 
-point ils se torchent avec loptimisation mais l ou ils frappent fort 
-cest que le jeu est de  jouer a fps pour deux trois rayons 
-de soleil et un peu docclusion ambiante non merci  noter quaucune 
-amlioration des modles d est prsenteprfrez donc la version de base qui elle permet davoir  fps constant et possde le workshop
