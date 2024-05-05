@@ -17,11 +17,10 @@ def lemmatiser_texte(texte):
     """Lemmatisation des commentaires"""
 
     nlp = spacy.load("fr_core_news_sm")
-    liste_lemmes = []
     doc = nlp(texte)
-    for token in doc:
-        liste_lemmes.append(token.lemma_)
-    return " ".join(liste_lemmes)
+
+    return doc
+
 
 
 def commentaire_français(texte : str | Path) -> bool:
@@ -68,11 +67,15 @@ def chargement_commentaire_positif(soup : BeautifulSoup, chemin_resultat : str |
         texte = texte.lower()
         # print(texte)
         if commentaire_français(texte):
-            mots_lemmatiser = lemmatiser_texte(texte)
-            mots = mots_lemmatiser.split()
-            if len(mots) >= 10: ## il doit y avoir plus de 10 mots dans le commentaire pour être pris en compte
-                liste.append(mots) ## ajout à la premiere liste
-                commentaire_positif = Commentaire(id_fichier=i, sentiment="positif", commentaire=mots) ## ajout à la liste de notre dataclass commentaire
+            if len(texte.split()) >= 10: ## il doit y avoir plus de 10 mots dans le commentaire pour être pris en compte
+                # Lémmatisation du texte complet
+                texte_lemmatise = lemmatiser_texte(texte)
+                print(texte_lemmatise)
+            # if len(mots) >= 10: ## il doit y avoir plus de 10 mots dans le commentaire pour être pris en compte
+                resultat = lemmatiser_texte(texte)
+                print(resultat)
+                liste.append(texte_lemmatise) ## ajout à la premiere liste
+                commentaire_positif = Commentaire(id_fichier=i, sentiment="positif", commentaire=texte_lemmatise) ## ajout à la liste de notre dataclass commentaire
                 liste_objet_positif.append(commentaire_positif)
                 i+=1
                 if i == 244:
@@ -81,16 +84,13 @@ def chargement_commentaire_positif(soup : BeautifulSoup, chemin_resultat : str |
     print(f'{len(liste)}')
     
     try:
-        for i, mots_lemmatiser in enumerate(liste): 
-            commentaire_texte = ' '.join(mots_lemmatiser)  ## pour ne pas avoir notre resultat sous forme de liste 
-            commentaire_texte = commentaire_texte.lower()  
+        for i, element in enumerate(liste): 
+            element = element.lower()
             with open(f"{chemin_resultat}/commentaire_positif_{i}.txt", 'w', encoding='UTF-8') as resultat:
-                resultat.write(commentaire_texte.strip()) 
-
+                resultat.write(element.strip())
 
     except Exception as e:
         print(f"Il y'a eu une erreur : {e}")
-    
     
     return liste_objet_positif
 
@@ -103,45 +103,37 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
     i = 0
     
     for element in tag:
-            texte = element.get_text()
-            texte = texte.lower()
-            # print(texte)
-            if commentaire_français(texte):
-                mots_lemmatiser = lemmatiser_texte(texte)
-                mots = mots_lemmatiser.split()
-                if len(mots) >= 10: ## il doit y avoir plus de 10 mots dans le commentaire pour être pris en compte
-                    liste.append(mots) ## ajout à la premiere liste
-                    commentaire_negatif = Commentaire(id_fichier=i, sentiment="negatif", commentaire=mots) ## ajout à la liste de notre dataclass commentaire
-                    liste_objet_negatif.append(commentaire_negatif)
-                    i+=1
-                    if i == 244:
-                        break
-
+        texte = element.get_text()
+        if commentaire_français(texte):
+            mots = texte.split()
+        
+            if len(mots) >= 10: 
+                liste.append(element.get_text())
+                commentaire_negatif = Commentaire(id_fichier=i, sentiment="negatif", commentaire=texte)
+                liste_objet_negatif.append(commentaire_negatif)
+                i+= 1
+                if i == 244: ## on récupère 245 commentaires négatifs afin d'avoir le même nombre de commentaires négatifs et positifs
+                    break
     print(f'{len(liste)}')
     
     try:
-        for i, mots_lemmatiser in enumerate(liste): 
-            commentaire_texte = ' '.join(mots_lemmatiser)  ## pour ne pas avoir notre resultat sous forme de liste 
-            commentaire_texte = commentaire_texte.lower()  
+        for i, element in enumerate(liste):
+            element = element.lower() ## on met tout en minuscule pour éviter les erreurs avec langdetect
             with open(f"{chemin_resultat}/commentaire_negatif_{i}.txt", 'w', encoding='UTF-8') as resultat:
-                resultat.write(commentaire_texte.strip()) 
-    
+                resultat.write(element.strip())
     except Exception as e:
         print(f"Il y'a eu une erreur : {e}")
-    
+
     return liste_objet_negatif
 
-    
 def ecrire_commentaire_csv(liste_commentaires, nom_fichier):
-    """Écriture des commentaires dans notre CSV"""
-
+    """ecriture des commentaires dans notre csv"""
+    
     with open(nom_fichier, mode='w', newline='', encoding='UTF-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['id_fichier', 'sentiment', 'commentaire'])
+        writer.writerow(['id_fichier', 'sentiment', 'commentaire'])  
         for commentaire in liste_commentaires:
-            commentaire_texte = ' '.join(commentaire.commentaire)  
-            writer.writerow([commentaire.id_fichier, commentaire.sentiment, commentaire_texte])  
-  
+            writer.writerow([commentaire.id_fichier, commentaire.sentiment, commentaire.commentaire])  
 
 
 
