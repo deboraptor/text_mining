@@ -131,8 +131,17 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
     
     return liste_objet_negatif
 
+
+def ecriture_commentaire_csv(liste_commentaires, nom_fichier):
+    """Écriture des commentaires dans notre CSV"""
+
+    with open(nom_fichier, mode='w', newline='', encoding='UTF-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(['commentaire'])  
+        for commentaire in liste_commentaires:
+            writer.writerow([commentaire.commentaire])
     
-def ecrire_commentaire_csv(liste_commentaires, nom_fichier):
+def ecrire_commentaire_csv_total(liste_commentaires, nom_fichier):
     """Écriture des commentaires dans notre CSV"""
 
     with open(nom_fichier, mode='w', newline='', encoding='UTF-8') as file:
@@ -147,15 +156,22 @@ def ecrire_commentaire_csv(liste_commentaires, nom_fichier):
 
 def main():
 
-    resultat_pretraitement_positif = pretraitement("../data/commentaire_positif/page/Communauté Steam The Elder Scrolls V Skyrim Special Edition.html")  
-    liste_commentaires_positifs = chargement_commentaire_positif(resultat_pretraitement_positif, "../data/commentaire_positif")
-    resultat_pretraitement_negatif = pretraitement("../data/commentaire_negatif/page/Communauté Steam The Elder Scrolls V Skyrim Special Edition.html") 
-    liste_commentaires_negatifs = chargement_commentaire_negatif(resultat_pretraitement_negatif, "../data/commentaire_negatif") 
+    resultat_pretraitement_positif = pretraitement("../data/commentaires_positifs/page/Communauté Steam The Elder Scrolls V Skyrim Special Edition.html")  
+    liste_commentaires_positifs = chargement_commentaire_positif(resultat_pretraitement_positif, "../data/commentaire_positifs")
+    resultat_pretraitement_negatif = pretraitement("../data/commentaires_negatifs/page/Communauté Steam The Elder Scrolls V Skyrim Special Edition.html") 
+    liste_commentaires_negatifs = chargement_commentaire_negatif(resultat_pretraitement_negatif, "../data/commentaire_negatifs") 
+
+    ## Ecriture des commentaires dans 2 csv différents
+    ecriture_commentaire_csv(liste_commentaires_negatifs, '../data/commentaire_negatifs/commentaires_negatifs.csv')
+    ecriture_commentaire_csv(liste_commentaires_positifs, '../data/commentaire_positifs/commentaires_positifs.csv')
 
     ##fusion des 2 listes de commentaires objets
     liste_commentaires = liste_commentaires_positifs + liste_commentaires_negatifs
 
-    ecrire_commentaire_csv(liste_commentaires, '../data/commentaires.csv')
+    ecrire_commentaire_csv_total(liste_commentaires, '../data/commentaires.csv')
+
+
+
 
 if __name__ == "__main__":
     main()
