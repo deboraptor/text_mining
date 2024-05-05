@@ -1,6 +1,10 @@
-import pandas as pd
 import nltk
 
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.metrics import confusion_matrix
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -28,10 +32,20 @@ def KNN(X, y, k=5):
     y_pred = clf.predict(X_test_tfidf)
     classification = classification_report(y_test, y_pred)
 
+    # Matrice de confusion
+    matrice = confusion_matrix(y_test, y_pred)
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(matrice, annot=True, fmt="d", cmap="Blues")
+    plt.xlabel("Prédit")
+    plt.ylabel("Vrai")
+    plt.title("Matrice de confusion KNN lemmatisée")
+    plt.savefig("../images/matrice_KNN_lemmatise.png")
+
     return classification
 
 def main():
-    X, y = pretraitement("../data/commentaire_positif/commentaires_positifs.csv", "../data/commentaire_negatif/commentaires_negatifs.csv")
+    X, y = pretraitement("../data/commentaires_positifs_lemmatises/commentaires_positifs_lemmatises.csv", "../data/commentaires_negatifs_lemmatises/commentaires_negatifs_lemmatises.csv")
+    # X, y = pretraitement("../data/commentaires_positifs/commentaires_positifs.csv", "../data/commentaires_negatifs/commentaires_negatifs.csv")
     print(KNN(X, y))
 
 if __name__ == "__main__":

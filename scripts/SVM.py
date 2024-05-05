@@ -1,10 +1,13 @@
-import pandas as pd
 import nltk
 
-from sklearn.naive_bayes import MultinomialNB
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.metrics import confusion_matrix
+from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 from nltk.corpus import stopwords
 
@@ -31,13 +34,40 @@ def SVM(X, y):
 
     # Entraîne le modèle sur l'ensemble d'entraînement
     clf.fit(X_train_tfidf, y_train)
-    y_pred = clf.predict(X_test_tfidf
+    y_pred = clf.predict(X_test_tfidf)
     classification = classification_report(y_test, y_pred)
+
+    # VP = []
+    # FP = []
+    # VN = []
+    # FN = []
+
+    # for phrase, vraie_valeur, prediction in zip(???["textes"], ???[???], y_pred):
+
+    #     if vraie_valeur == 1 and prediction == 1:
+    #         VP.append((phrase, vraie_valeur, prediction))
+    #     elif vraie_valeur == 0 and prediction == 1:
+    #         FP.append((phrase, vraie_valeur, prediction))
+    #     elif vraie_valeur == 0 and prediction == 0:
+    #         VN.append((phrase, vraie_valeur, prediction))
+    #     elif vraie_valeur == 1 and prediction == 0:
+    #        FN.append((phrase, vraie_valeur, prediction))
+
+    # Matrice de confusion
+    matrice = confusion_matrix(y_test, y_pred)
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(matrice, annot=True, fmt="d", cmap="PuRd")
+    plt.xlabel("Prédit")
+    plt.ylabel("Vrai")
+    plt.title("Matrice de confusion SVM lemmatisée")
+    plt.savefig("../images/matrice_SVM_lemmatise.png")
+
     return classification
 
 
 def main():
-    X, y = pretraitement("../data/commentaire_positif/commentaires_positifs.csv", "../data/commentaire_negatif/commentaires_negatifs.csv")
+    # X, y = pretraitement("../data/commentaires_positifs/commentaires_positifs.csv", "../data/commentaires_negatifs/commentaires_negatifs.csv")
+    X, y = pretraitement("../data/commentaires_positifs/commentaires_positifs.csv", "../data/commentaires_negatifs/commentaires_negatifs.csv")
     print(SVM(X, y))
 
 
