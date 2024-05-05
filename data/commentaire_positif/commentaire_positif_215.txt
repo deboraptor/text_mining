@@ -1,1 +1,19 @@
-après plusieurs heure sur ce nouveau version je peux clairement affirmer que le graphisme avoir être largement améliorer et cela permettre de se passer de certain mod graphiquesd plus le nouveau client 64 bit assurer un performance optimal au jeu concrètement le jeu en luire même ne changer pas mais le distance de vue le nouveau couleur et lambiance renforcer encore plus ce sentiment de liberté qui nous être proposer en 2011 et pouvoir le plupart de joueur pc avoir déja skyrim et son extension le jeu être donc gratuit pour euxpour le nouveau joueur il découvrir un monument de jeu de rôle et le série elder scrollspoint négatif malgré tout le disparition de mod via steam puisque bethesda imposer son boutique de mod désormais mais on pouvoir toujours passer par lexcellent nexus mod manager et si le mod de le version 32 bit de skyrim ne être pas compatible beaucoup de développeur éffectuent le transition et dici quelque semaine le plupart de mod être disponible sur ce version 64 bitson attendre malgré tout le retour de skse et skyui qui ne être pour le moment pas adapter mais le développeur assurer bosser dessu de mod comme frostfall ou ineed être déjâ disponible mais sans skse son compatibilité être encore un peu limité
+après plusieurs heures sur cette nouvelle version je 
+peux clairement affirmé que les graphismes ont été largement améliorés 
+et ça permet de se passer de certains mods graphiquesde plus le
+ nouveau client 64 bits assure des performances optimales au jeu 
+concrètement le jeu en lui même ne change pas mais la distance de vue 
+les nouvelles couleurs et lambiance renforcent encore plus ce 
+sentiment de liberté qui nous était proposé en 2011 et puis la plupart
+ des joueurs pc ont déja skyrim et ses extensions le jeu est donc 
+gratuit pour euxpour les nouveaux joueurs ils découvriront un monument du jeu de rôle et la série elder scrollspoint
+ négatif malgré tout  la disparition des mods via steam puisque 
+bethesda impose sa boutique de mod désormais mais on peut toujours 
+passer par lexcellent nexus mod manager et si les mods de la version 
+32 bits de skyrim ne sont pas compatibles beaucoup de développeurs 
+éffectuent la transition et dici quelques semaines la plupart des mods 
+seront disponibles sur cette version 64 bitson attend malgré 
+tout le retour de skse et skyui qui ne sont pour le moment pas adaptés 
+mais les développeurs assurent bosser dessus des mods comme frostfall 
+ou ineed sont déjâ disponible mais sans skse leur compatibilité est 
+encore un peu limité

@@ -1,5 +1,5 @@
 encore une fois les developpeurs nous montrent a quel 
-point ils se torchent avec loptimisation mais l ou ils frappent fort 
-cest que le jeu est de  jouer a fps pour deux trois rayons 
-de soleil et un peu docclusion ambiante non merci  noter quaucune 
-amlioration des modles d est prsenteprfrez donc la version de base qui elle permet davoir  fps constant et possde le workshop
+point ils se torchent avec loptimisation mais là ou ils frappent fort 
+cest que le jeu est de 2011 jouer a 40fps pour deux trois rayons 
+de soleil et un peu docclusion ambiante non merci à noter quaucune 
+amélioration des modèles 3d est présentepréférez donc la version de base qui elle permet davoir 60 fps constant et possède le workshop
