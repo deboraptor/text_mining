@@ -1,6 +1,1 @@
-cette version remasteriser est bourré de bugs jamais corrigé qui nétait même pas présent dans le jeu de baseentre
- linventaire qui se ferme aléatoirement les dialogues impossible à 
-lancer ou poursuivre  et donc les quetes inaccessible faute de dialogue
- les zones additionnels issus des extensions  comme le chateau
- de la garde de laube considéré comme hors limite de la carte et donc 
-inaccessible la liste est longue et ça mas coupé lenvie de me remettre a ce jeu qui mas pourtant occupé tant dheures par le passé
+ce version remasteriser être bourré de bug jamais corriger qui néter même pas présent dans le jeu de baseentre linventair qui se ferme aléatoirement le dialogue impossible à lancer ou poursuivre et donc le quete inaccessible faute de dialogue le zone additionnel issu de extension comme le chateau de le garde de laube considérer comme hors limite de le carte et donc inaccessible le liste être long et cela mas couper lenvi de me remettre avoir ce jeu qui mer pourtant occuper tant dheure par le passé

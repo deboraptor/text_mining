@@ -1,3 +1,4 @@
 langdetect
 scikit learn
 BeautifulSoup
+Spacy
