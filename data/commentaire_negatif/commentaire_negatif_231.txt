@@ -1,1 +1,1 @@
-jai un problème le jeu plante lorsque que jarrive à la création du personnage
+ne contient pas les dlc alors que sur la page du magasin précise " contient les contenus additionnels"

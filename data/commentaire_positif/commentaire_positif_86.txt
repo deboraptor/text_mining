@@ -1,5 +1,20 @@
-positifle jeu est en 64 bits et donc il nest 
-plus aussi limité que lancien skyrim niveau mémoire donc plus de 
-texture hd et moins de crash avec skse64 99 des mods de la legendary 
-edition sont disponible pour la special edition le jeu est extrèmement 
-stable je joue avec environ 700 mods et je nai aucun crashnégatifle nouvel anti-aliasing taa rend le jeu tout flou cest dégeulasse pourquoi ont-ils enlevé le msaa -_-il y a des mises à jour chiantes régulièrement qui demandent une mise à jour de skserequiem nest pas disponible encoreconclusioncest bien
+produit reçu gratuitementthe elder scrolls v: skyrim special edition[+]•
+ fut gratuit pour les possesseurs de la legendary edition, une 
+"opération" pour poussé tout les moddeurs (expert comme amateur) à porté
+ leurs mods sur consoles car cette nouvelle édition intègre un menu 
+spécial "mod".• un peu plus jolie avec l'ajouts des godrays, 
+shaders, de l'herbe en plus et compagnie. oui c'est cool mais rien de 
+transcendant.• le jeu est plus stable (certaines zones sont mêmes 
+moins gourmandes, comme markarth) et supporte hypothétiquement bien plus
+ de mods sans soucis avec le jeu cette fois-ci en 64bit.• les 
+anciens mods peuvent être simplement compatible avec une mise à jour sur
+ le nouveau creation kit dédié à la special edition.• les sauvegardes vanilla sont compatibles.• une page dédié à cette monture surhttp://www.nexusmods.compour le modding.[-]• aucunes corrections de bugs, et il y en a plein. donc voici le patch non officiel traduit en français :http://www.nexusmods.com/skyrimspecialedition/mods/2193•bethesda.netremplace le steam workshop, bethesda essaie de faire son petit coin 
+"partage de mods" mais ce n'était déjà pas la fête de l'ergonomie sur le
+ workshop alors chez toi, une horreur. rien ne vaut encore un mod 
+manager hors jeu avec le nexus actuellement.• le txaa est affreux 
+tout comme sur fallout 4, priviligié antialiasing forcé par votre carte 
+graphique ou autre. (j'utilise personellementreshade[reshade.me]avec le filtre lumashapen à 1.0 de strength en plus du txaa).skyrim
+ fait parti de mes jeux favoris, j'ai donc vite été tenté de refaire 
+entièrement le jeu sur cette "special edition" qui n'a rien de spécial 
+d'ailleurs et ne vaut pas son prix, ni en solde. tout de même, skyrim 
+reste skyrim, magistrale.the elder scrolls v: skyrim>https://steamcommunity.com/profiles/76561198006284332/recommended/72850

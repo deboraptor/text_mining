@@ -1,1 +1,3 @@
-produit reçu gratuitementle son semble fonctionner nais limage du jeu ne saffiche pasje vais essayer de nouveau
+je ne vois pas d'amélioration sensible, tout ce qui 
+change est que ca ralentit les animations, le jeu lag et du coup c'est 
+moins jouable.

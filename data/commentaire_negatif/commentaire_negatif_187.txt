@@ -1,10 +1,18 @@
-allez op bethesda vient de détruire son jeu et 10 ans 
-de travails dune communauté entière pourquoi  célébré ses 10 ans du 
-capitalisme et si vous vous demandez pourquoi - la mise à jour casse skse par conséquent une énorme partie des mods skyrim script extender- ils obligent pour la 3e fois les devs dskse à recoder lapplication de zéro- les mods sur skse ae devront être recodé- fragmentation de la scène modding abandon de mods à la clé- les fichiers mis à jour sont bourrés derreurs- ils ont oublié le dll qui gère la vidéo dintro à la sortie day one- le contenu ajouté nest pas entièrement lore friendly pour un jeu de rôle cest un non-sens-
- les mods inclus dans la nouvelle édition sont pour certain obsolète 
-depuis des années à cause dautres mods bien plus évolués reprenant 
-exactement le même principe- les devs ont été payé par bethesda pour racheter les droits exclusifs sur le cc creation club-
- ces mêmes devs ont été payé pour leurs travails mais ne recevront rien 
-sur les ventes et nont plus les droits sur leurs créations- ils ont ajouté des armes draugr oublié dans la partie gérant les poissons du mod de pêche-
- le mode survie est un fork de frostfall même dev bethesda à interdit
- à ce dev dupdate son mod originel hors du mod survie cc depuis 2016et ça cest locéan de  qui commence à remonter au premier jour de la sortie la liste va grandir cest sûrla solution pour downgrade httpswwwnexusmodscomskyrimspecialeditionmods57618tabposts
+produit reçu gratuitementpremièrement, avant de le téléchargé, j'avoue avoir été 
+hypé. mon jeu préféré qui refait surface avec une toute nouvelle beauté 5
+ ans après sa sortie, c'est quand même cool. même si j'ai déja plusieurs
+ mods graphiques améliorant nettement les graphismes du jeu, je me 
+disais que l'édition spéciale allait être plus optimisée. je pensais 
+également qu'il allait s'agir seulement d'une sorte de dlc, à la manière
+ des textures hd, disponibles gratuitement.puis, j'ai télécharge l'édition spéciale, et là, frustration over 9000:-
+mon pc qui faisait tourner skyrim avec plus de 200 mods n'arrive pas à 
+faire tourner l'edition spéciale en bas. (60 pour skyrim de base, 25 
+pour l'es)-je n'ai pas mes mods (200 c'est quand même beaucoup)c'est
+ certes très beau mais l'optimisation laisse à désirer, en espérant une 
+correction dans un futur le plus proche posssible. j'espère aussi la 
+possibilité de retrouver mes mods (en enlevant les mods graphiques) afin
+ d'avoir un skyrim "parfait". (même si mon skyrim moddé de base l'est 
+aussi :3)je ne recommande donc pas skyrim: special edition pour 
+le moment, en éspérant des changements le plus tôt possible. enfin, si 
+comme moi vous avez recu le "jeu" gratuitement, vous pouvez rejouer 
+cette folle aventure "vanilla" avec une ambiance agrébale et nouvelle"
