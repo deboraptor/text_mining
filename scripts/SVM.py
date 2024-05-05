@@ -6,7 +6,9 @@ import csv
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report
+from sklearn.pipeline import make_pipeline
 from nltk.corpus import stopwords
 
 
@@ -46,27 +48,28 @@ def SVM(X, y):
     nltk.download('stopwords')
     stop_words = stopwords.words('french')
     stop_words.remove("pas")
-    vectorizer = TfidfVectorizer(stop_words=stop_words)
-    X_train_tfidf = vectorizer.fit_transform(X_train)
-    X_test_tfidf = vectorizer.transform(X_test)
+    vectorizer = make_pipeline(TfidfVectorizer(stop_words=stop_words), MultinomialNB)
+    X_train_tfidf = vectorizer.fit(X_train)
+    # X_test_tfidf = vectorizer.transform(X_test)
 
     # Création du modèle SVM 
     # type de noyau : linéaire / polynomial / radial
     # C = constante de régularisation  qui comntrôle maximisation de la marge et de la 
     # minimisation des erreurs de classification
-    clf = SVC(kernel='rbf', C=1.0)
+  
 
     # Entraîne le modèle sur l'ensemble d'entraînement
-    clf.fit(X_train_tfidf, y_train)
-    y_pred = clf.predict(X_test_tfidf)
+    vectorizer.fit(X_train_tfidf, y_train)
+    y_pred = vectorizer.predict(X)
 
     classification = classification_report(y_test, y_pred)
     return classification
 
 
 def main():
-    construire_csv("./data/commentaire_negatif", "./data/commentaire_negatif/commentaires_negatifs.csv")
-    X, y = pretraitement("./data/commentaire_positif/commentaires_positif.csv", "./data/commentaire_negatif/commentaires_negatifs.csv")
+    construire_csv("../data/commentaire_negatif", "../data/commentaire_negatif/commentaires_negatifs.csv")
+    construire_csv("../data/commentaire_positif", "../data/commentaire_positif/commentaires_positif.csv")
+    X, y = pretraitement("../data/commentaire_positif/commentaires_positif.csv", "../data/commentaire_negatif/commentaires_negatifs.csv")
     print(SVM(X, y))
 
 
