@@ -17,20 +17,20 @@ def construire_csv(chemin_dossier, csv_chemin):
                     writer.writerow([contenu])
 
 
-def lemmatiser_csv(csv_chemin_entree, csv_chemin_sortie):
+mots_a_exclure = ["ajd", "bcp", "bjr", "c", "chui", "dc", "dsl", "ds", "g", "mdr", "mdrr", "mnt", "mwa", "nrv", "osef", "pcq", "psk", "pck", "pb", "pk", "pq", "prk", "pr", "ptdr", "ptdrr", "srx", "stp", "svp", "tlm", "tjrs", "tjs", "tjr", "mod", "arpg", "antialiasing", "hotfixe", "gameplay"]
+
+
+def lemmatiser_csv(csv_chemin_entree, csv_chemin_sortie, mots_a_exclure):
     with open(csv_chemin_entree, "r", newline="", encoding="utf-8") as fichier_csv_entree:
         reader = csv.reader(fichier_csv_entree)
-
         with open(csv_chemin_sortie, "w", newline="", encoding="utf-8") as fichier_csv_sortie:
             writer = csv.writer(fichier_csv_sortie)
-
             for ligne in reader:
                 contenu = ligne[0]
                 doc = nlp(contenu)
-                tokens_lemmatise = [token.lemma_ for token in doc]
+                tokens_lemmatise = [token.lemma_ if token.text not in mots_a_exclure else token.text for token in doc]
                 contenu_lemmatise = " ".join(tokens_lemmatise)
                 writer.writerow([contenu_lemmatise])
-
 
 
 def pretraitement(csv_pos, csv_neg):
@@ -50,8 +50,12 @@ def pretraitement(csv_pos, csv_neg):
 
 
 def main():
-    X, y = pretraitement("../data/commentaire_positif/commentaires_positif.csv", "../data/commentaire_negatif/commentaires_negatifs.csv")
+    X, y = pretraitement("../data/commentaire_positif/commentaires_positifs.csv", "../data/commentaire_negatif/commentaires_negatifs.csv")
     construire_csv("../data/commentaire_negatif", "../data/commentaire_negatif/commentaires_negatifs.csv")
+    construire_csv("../data/commentaire_positif", "../data/commentaire_positif/commentaires_positifs.csv")
+    lemmatiser_csv("../data/commentaire_positif/commentaires_positifs.csv", "../data/commentaire_positif/commentaires_positifs_lemmatise.csv", mots_a_exclure)
+    lemmatiser_csv("../data/commentaire_negatif/commentaires_negatifs.csv", "../data/commentaire_negatif/commentaires_negatifs_lemmatise.csv", mots_a_exclure)
+    print("C'est fini !")
 
 if __name__ == "__main__":
     main()

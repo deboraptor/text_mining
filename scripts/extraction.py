@@ -12,12 +12,12 @@ from datascturtures import Commentaire
 from typing import List
 
 
-def commentaire_français(texte : str | Path) -> bool:
-    """Vérifie si un texte est en français."""
-    if len(texte) < 9:  ## on prédéfinit que notre texte doit avoir plus de 9 caractères
-        return False
-    langue = detect(texte)
-    return langue == 'fr'
+# def commentaire_français(texte : str | Path) -> bool:
+#     """Vérifie si un texte est en français."""
+#     if len(texte) < 9:  ## on prédéfinit que notre texte doit avoir plus de 9 caractères
+#         return False
+#     langue = detect(texte)
+#     return langue == 'fr'
 
 def pretraitement(page_html: str | Path) -> str:
     """Fonction qui permet de mieux supprimer le tag de la date et aussi prétraiter le texte"""
@@ -34,11 +34,6 @@ def pretraitement(page_html: str | Path) -> str:
     for tag in soup.find_all(attrs={'class':'apphub_CardTextContent'}):
         tag.string = tag.get_text(strip=True)
 
-    ## utilisation d'une expression régulière afin de retirer les commentaire qui sont des dessins graphiques
-    for tag in soup.find_all(attrs={'class':'apphub_CardTextContent'}):
-        cleaned_text = re.sub(r'[^\w\s-]', '', tag.get_text()) 
-        tag.string = cleaned_text.lower()  
-    
     return soup
 
 
@@ -56,16 +51,16 @@ def chargement_commentaire_positif(soup : BeautifulSoup, chemin_resultat : str |
         texte = element.get_text()
         texte = texte.lower()
         # print(texte)
-        if commentaire_français(texte):
-            mots = texte.split()
+        # if commentaire_français(texte):
+        mots = texte.split()
 
-            if len(mots) >= 10: ## il doit y avoir plus de 10 mots dans le commentaire pour être pris en compte
-                liste.append(element.get_text()) ## ajout à la premiere liste
-                commentaire_positif = Commentaire(id_fichier=i, sentiment="positif", commentaire=texte) ## ajout à la liste de notre dataclass commentaire
-                liste_objet_positif.append(commentaire_positif)
-                i+=1
-                if i == 244:
-                    break
+        if len(mots) >= 10: ## il doit y avoir plus de 10 mots dans le commentaire pour être pris en compte
+            liste.append(element.get_text()) ## ajout à la premiere liste
+            commentaire_positif = Commentaire(id_fichier=i, sentiment="positif", commentaire=texte) ## ajout à la liste de notre dataclass commentaire
+            liste_objet_positif.append(commentaire_positif)
+            i+=1
+            if i == 244:
+                break
 
     print(f'{len(liste)}')
     
@@ -90,16 +85,16 @@ def chargement_commentaire_negatif(soup : BeautifulSoup, chemin_resultat : str |
     
     for element in tag:
         texte = element.get_text()
-        if commentaire_français(texte):
-            mots = texte.split()
+        # if commentaire_français(texte):
+        mots = texte.split()
         
-            if len(mots) >= 10: 
-                liste.append(element.get_text())
-                commentaire_negatif = Commentaire(id_fichier=i, sentiment="negatif", commentaire=texte)
-                liste_objet_negatif.append(commentaire_negatif)
-                i+= 1
-                if i == 244: ## on récupère 245 commentaires négatifs afin d'avoir le même nombre de commentaires négatifs et positifs
-                    break
+        if len(mots) >= 10: 
+            liste.append(element.get_text())
+            commentaire_negatif = Commentaire(id_fichier=i, sentiment="negatif", commentaire=texte)
+            liste_objet_negatif.append(commentaire_negatif)
+            i+= 1
+            if i == 244: ## on récupère 245 commentaires négatifs afin d'avoir le même nombre de commentaires négatifs et positifs
+                break
     print(f'{len(liste)}')
     
     try:

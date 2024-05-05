@@ -31,13 +31,13 @@ def SVM(X, y):
 
     # Entraîne le modèle sur l'ensemble d'entraînement
     clf.fit(X_train_tfidf, y_train)
-    y_pred = clf.predict(X_test_tfidf)
-
+    y_pred = clf.predict(X_test_tfidf
     classification = classification_report(y_test, y_pred)
     return classification
 
 
 def main():
+    X, y = pretraitement("../data/commentaire_positif/commentaires_positifs.csv", "../data/commentaire_negatif/commentaires_negatifs.csv")
     print(SVM(X, y))
 
 
