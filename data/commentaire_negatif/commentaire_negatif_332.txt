@@ -1,5 +1,0 @@
-impossible dy jouer le jeu se ferme à son 
-lancement après avoir passé plusieurs heures sur internet pour tenter 
-de trouver une solution je nai toujours pas pu lancer le jeu au vu des
- conseil jai installé le skse via un lien internet et jai également 
-passé mon son en 24 bit mais toujours riencomment tirer 40- à la poubelle merci les gars cest super
