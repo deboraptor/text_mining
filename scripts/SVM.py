@@ -8,21 +8,7 @@ from sklearn.svm import SVC
 from sklearn.metrics import classification_report
 from nltk.corpus import stopwords
 
-
-def pretraitement(csv_pos, csv_neg):
-    df_pos = pd.read_csv(csv_pos, header=None, encoding="utf-8")
-    df_neg = pd.read_csv(csv_neg, header=None, encoding="utf-8")
-    df = pd.concat([df_pos, df_neg], ignore_index=True)
-
-    # Ajoute une colonne pour les étiquettes de classe (0 pour négatif, 1 pour positif)
-    df["label"] = [0] * len(df_neg) + [1] * len(df_pos)
-
-    # les caractéristiques : fréquences des mots ou n-grammes
-    X = df[0]
-    # les classes : positif ou negatif
-    y = df["label"]
-
-    return X, y
+from construire_csv import pretraitement
 
 
 def SVM(X, y):
@@ -52,7 +38,6 @@ def SVM(X, y):
 
 
 def main():
-    X, y = pretraitement("./data/commentaire_positif/commentaires_positif.csv", "./data/commentaire_negatif/commentaires_negatifs.csv")
     print(SVM(X, y))
 
 
